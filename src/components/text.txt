@@ -1,0 +1,219 @@
+
+    <ul className="flex justify-between items-center space-x-4  md:flex ">
+
+
+    The Last of Us takes place 20 years after modern civilization has been destroyed.
+     In this action-adventure series, Joel (Pedro Pascal), a hardened survivor, 
+     is hired to smuggle Ellie (Bella Ramsey), a 14-year-old girl, out of an oppressive quarantine zone.
+
+
+        style={{ backgroundImage: `url('/lastofus.jpg')` }}
+
+
+         linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), 
+  linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+
+
+
+export function EmblaCarousel() {
+  const [emblaRef] = useEmblaCarousel()
+
+  return (
+    <div className="embla" ref={emblaRef}>
+      <div className="embla__container">
+        <div className="embla__slide"> Slide 1 </div>
+        <div className="embla__slide">Slide 2</div>
+        <div className="embla__slide">Slide 3</div>
+      </div>
+    </div>
+  )
+}
+
+
+<div className="embla__slide"> 
+        <div className="flex items-center" >
+                <img className="w-16 rounded-full h-16 bg-center" src={img}/>
+                <div>
+                    <h4>{realName}</h4>
+                    <p>{stageName}</p>
+                </div>
+            </div>
+          
+          </div>
+
+
+        <div className="embla__slide"> <div className="flex items-center"   >
+                <img className="w-16 rounded-full h-16 bg-center" src={img}/>
+                <div>
+                    <h4>{realName}</h4>
+                    <p>{stageName}</p>
+                </div>
+            </div></div>
+        <div className="embla__slide">
+           <div className="flex items-center"   >
+                <img className="w-16 rounded-full h-16 bg-center" src={img}/>
+                <div>
+                    <h4>{realName}</h4>
+                    <p>{stageName}</p>
+                </div>
+            </div>
+            </div>
+
+
+            
+            <div className="flex justify-between">
+
+            {cast.map((member, index) => (
+     
+            <div className="flex items-center "  key={index} >
+                <img className="w-16 rounded-full h-16 bg-center" src={member.img}/>
+                <div>
+                    <h4>{member.realName}</h4>
+                    <p>{member.stageName}</p>
+                </div>
+            </div>
+
+
+     ))}
+          </div>
+
+
+
+
+
+          // Hero.jsx
+import React from 'react';
+
+const Hero = ({ movies }) => {
+  // Assuming you want to display the title of the first movie
+  const featuredMovie = movies[0]; // This grabs the first movie in the list
+
+  return (
+    <>
+      <div
+        className="h-1/2 md:h-screen bg-cover bg-center flex justify-start items-center"
+        style={{ backgroundImage: `url('/lastofus.jpg')` }}
+      >
+        <div className="text-white text-left mt-28 pl-4">
+          <p className="bg-black rounded-3xl w-14 md:w-16 text-center mb-2 md:mb-6">series</p>
+          {/* Check if the featuredMovie exists before trying to access its properties */}
+          <h1 className="text-2xl font-bold mb-2 md:mb-6 md:text-5xl">
+            {featuredMovie ? featuredMovie.title : 'Loading...'} {/* Display the movie title */}
+          </h1>
+          <p className="text-sm mb-4 md:mb-6">9 episodes . 2023 . Fantasy . Action</p>
+          <button className="flex items-center mb-4 font-bold bg-green-500 text-white text-sm md:text-lg px-8 py-2 md:px-6 md:py-2 rounded-xl">
+            <img className="border-2 rounded mr-2" src="/play-icon.png" alt="play-icon" /> Watch
+          </button>
+        </div>
+      </div>
+
+      <div className="mt-10">
+        <h4 className="font-bold mt-4 text-lg">Storyline</h4>
+        <p>
+          The Last of Us takes place 20 years after modern civilization has been destroyed. In this action-adventure
+          series, Joel (Pedro Pascal), a hardened survivor, is hired to smuggle Ellie (Bella Ramsey), a 14-year-old
+          girl, out of an oppressive quarantine zone.
+        </p>
+      </div>
+
+      <div className="mt-6 mb-2">
+        <h4 className="font-bold text-lg">Top cast</h4>
+      </div>
+    </>
+  );
+};
+
+export default Hero;
+
+
+
+
+
+
+
+
+
+import React, { useEffect, useState } from 'react'
+
+const MovieList = ({ movie }) => {
+
+ 
+
+  return (
+    <div className='mt-20'>
+     <h1>Discover</h1>
+
+<div className='flex'>
+
+     {movie.map((movies) => (
+
+      <div key={movies.id}>
+        <img className='w-32' src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`}/>
+        <h2>{movies.title}</h2>
+        <p><strong>Release Date:</strong> {movies.release_date}</p>
+        <p><strong>Overview:</strong> {movies.overview}</p>
+
+      </div>
+    
+     ))}
+     </div>
+
+    </div>
+  )
+}
+
+export default MovieList
+
+  ? `url(https://image.tmdb.org/t/p/w500${movie.poster_path})`
+
+
+ const [currentImage, setcurrentImage] = useState[0];
+
+  const increment = () => {
+    setcurrentImage( currentImage + 1)
+  }
+
+
+
+  
+  <div className=''>
+
+     {movie.map((movies) => (
+      <div className="" key={movies.id}>
+        <img className='w-32' src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`}/>
+        <h2>{movies.title}</h2>
+      </div>
+    
+     ))}
+     </div>
+
+
+
+///////////////// 
+
+this is for embla carousel 
+
+
+<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-center">
+  {movie.map((movies) => (
+    <div className="" key={movies.id}>
+      <img className="w-36" src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`} alt={movies.title} />
+      <h2 >{movies.title}</h2>
+      <span>({movies.release_date})</span>
+    </div>
+  ))}
+</div>
+
+
+ name: "categories",
+                name: "Devices",
+                name: "",
+                name: ""
+
+
+
+the logic is create route that will navigate to different pages on the website 
+--Home (Done)
+--Up coming(Done)
+--Latest release (Done)
+-- Tv 
