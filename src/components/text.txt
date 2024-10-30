@@ -216,4 +216,13 @@ the logic is create route that will navigate to different pages on the website
 --Home (Done)
 --Up coming(Done)
 --Latest release (Done)
--- Tv 
+-- Tv (DOne)
+
+the next Tasks
+-- filter search function
+-- Change the UI of the routed navigation
+-- Make the Hero section image dynamic ( let it show different movie posters)
+-- Add User authentication (if possible)
+-- correct the static navigation when routing to different pages in the website 
+-- Make the lists of movies clickable to display the details of the movies (If possible)
+-- Lastly correctly structure your code 
