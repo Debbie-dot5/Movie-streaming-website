@@ -53,6 +53,8 @@ export const MovieProvider = ({ children }) => {
         console.log("popular", popular.results);
         console.log("toprated", topRated.results);
         console.log("upcoming", upComing.results);
+        console.log("tvshows", tvShows.results);
+
       
       
         }

@@ -10,7 +10,7 @@ const MovieList = () => {
 
 return(
 
-  <div className="mt-20 px-2 lg:px-8 md:px-2">
+  <div className="mt-10 px-2 lg:px-8 md:px-2">
 
  <>
  <Link to='/latest-release'>

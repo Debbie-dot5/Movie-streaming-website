@@ -11,12 +11,12 @@ const TopRated = () => {
   return (
 
     <>
-    <div className="flex border rounded-full w-60">
+    <div className="flex border rounded-full w-1/2  m-auto my-8">
         <img src="/Icon.png" className="px-1.5 py-1" />  
       <input 
       placeholder="Search" 
       type="text" 
-      className="outline-none text-white rounded-r-2xl bg-black" 
+      className="outline-none text-white rounded-r-2xl bg-black  w-full" 
       onChange={(event) => {
             console.log(event)
           }}/>

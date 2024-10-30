@@ -2,8 +2,6 @@
 import { MovieContext } from "../context/Moviecontext";
 import { useContext, useState } from "react";
 
-// inorder to create a search input field that filters out the keyword that is being typed
-// first create a function that will hold the function that will run the search
 
 
 
@@ -12,23 +10,20 @@ const Upcomingshows = () => {
   const [filteredMovie, setfilteredMovies] = useState(upComing)
 
   const handleSearch = (event) => {
-    console.log(event.target.value)
     const searchFieldValue = event.target.value.toLowerCase();
     const filteredValue = upComing.filter((filterResult) => (
        filterResult.title.toLowerCase().includes(searchFieldValue)
     ))
     setfilteredMovies(filteredValue)
 
-    // const filteredMovies = upComing.filter((upcomingTitle) => {
-    //   return upcomingTitle.title.includes(event.target.value)
-    // })
+   
   }
 
 
   return (
 
     <>
-    <div className="flex border rounded-full w-1/2 m-auto my-8">
+    <div className="flex border rounded-full w-1/2  m-auto my-8 ">
         <img src="/Icon.png" className="px-1.5 py-1" />  
       <input 
       placeholder="Search" 

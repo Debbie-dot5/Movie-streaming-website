@@ -34,7 +34,7 @@ const Hero = () => {
             <p className=" text-sm pl-2 mb-4 md:mb-6">
             {featuredMovie ? featuredMovie.release_date : 'Loading'}
             </p>
-            <button className=" flex items-center mb-4 font-bold bg-red-700 text-white text-sm md:text-lg px-8 py-2 md:px-6 md:py-2 rounded-xl"> 
+            <button className=" flex items-center mb-14 font-bold bg-red-700 text-white text-sm md:text-lg px-8 py-2 md:px-6 md:py-2 rounded-xl"> 
                 <img className="border-2 rounded mr-2" src="/play-icon.png"/> Watch
                 </button>
 
@@ -42,11 +42,7 @@ const Hero = () => {
         </div>
       </div>
 
-     
-{/* 
-          <div className=" mt-6 mb-2">
-            <h4 className="font-bold text-lg">Top cast</h4>
-          </div> */}
+    
       </>
     );
   };

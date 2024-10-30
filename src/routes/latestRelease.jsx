@@ -1,29 +1,35 @@
 
 import { MovieContext } from "../context/Moviecontext";
-import { useContext } from "react";
-
+import { useContext, useState } from "react";
 
 
 const LatestRelease = () => {
   const { movie } = useContext(MovieContext)
+  const [filteredMovie, setfilteredMovies] = useState(movie) 
 
+  const handleSearch = () => {
+    const searchField = event.target.value.toLowerCase();
+    const filteredValue = movie.filter((filterResult) => (
+      filterResult.title.toLowerCase().includes(searchField)
+    ))
+
+    setfilteredMovies(filteredValue)
+  }
 
   return (
 
     <>
-    <div className="flex border rounded-full w-60">
+    <div className="flex border rounded-full w-1/2  m-auto my-8">
         <img src="/Icon.png" className="px-1.5 py-1" />  
       <input 
       placeholder="Search" 
       type="text" 
-      className="outline-none text-white rounded-r-2xl bg-black" 
-      onChange={(event) => {
-            console.log(event)
-          }}/>
+      className="outline-none text-white rounded-r-2xl bg-black  w-full" 
+      onChange={handleSearch}/>
     </div>
 
 <div className=" flex flex-wrap justify-center gap-6">
-{movie.map((movies) => (
+{filteredMovie.map((movies) => (
     <div className="flex flex-col items-center w-40 sm:w-48 md:w-52 lg:w-60"  key={movies.id}> 
       <div>
       <img className="w-full h-auto rounded object-cover" 
